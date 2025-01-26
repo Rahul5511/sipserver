@@ -8,6 +8,11 @@ const server = http.createServer(app);
 
 app.use(cors());
 
+// Serve a welcome message at the root URL
+app.get("/", (req, res) => {
+  res.send("Welcome to the video call server!");
+});
+
 const io = new Server(server, {
   cors: {
     origin: "http://localhost:3001", // React.js client origin
