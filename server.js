@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3001", // React.js client origin
+    origin: "*", // React.js client origin
     methods: ["GET", "POST"],
   },
 });
